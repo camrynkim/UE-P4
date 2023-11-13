@@ -6,4 +6,8 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return render(request, "search/index.html")
+
+
+def not_yet_implemented(request):
+    return render(request, "search/not_yet_implemented.html")
