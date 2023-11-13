@@ -20,4 +20,6 @@ from . import views
 urlpatterns = [
     path("", views.index, name="index"),
     path("notyetimplemented", views.not_yet_implemented, name="not_yet_implemented"),
+    path("search", views.search, name="search"),
+    path("search/results", views.results, name="results"),
 ]
