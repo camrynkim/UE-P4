@@ -22,4 +22,6 @@ urlpatterns = [
     path("notyetimplemented", views.not_yet_implemented, name="not_yet_implemented"),
     path("search", views.search, name="search"),
     path("search/results", views.results, name="results"),
+    path("search/submit", views.submit, name="submit"),
+
 ]
