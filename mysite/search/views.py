@@ -46,5 +46,9 @@ def results(request):
     return render(request, "search/results.html")
 
 
+def results2(request):
+    return render(request, "search/results_bysalary.html")
+
+
 def not_yet_implemented(request):
     return render(request, "search/not_yet_implemented.html")

@@ -33,6 +33,12 @@
 
 <body style="background-color: #E6E6E6">
 <div class="container">
+    <div>
+        <a href="{% url 'not_yet_implemented' %}"><i class="fa-solid fa-bars" style="font-size: 50px; margin-top: 25px"></i></a>
+        <a href="{% url 'not_yet_implemented' %}"><i class="fa-solid fa-magnifying-glass" style="font-size: 50px; float: right; margin-top: 25px; margin-left: 25px"></i></a>
+        <a href="{% url 'not_yet_implemented' %}"><i class="fa-solid fa-question" style="font-size: 50px; float: right; margin-top: 25px"></i></a>
+    </div>
+
     <h1><span class="text_blue">Chef Jobs</span> near <span class="text_blue">Charlottesville, VA</span>
         <span class="num_results">(5 results)</span></h1>
     <a href="search.html" class="btn btn-primary">Change Search Criteria</a>
@@ -40,8 +46,8 @@
     <div align="right">
         <label for="sort">Sort By:</label>
         <select name="sort" id="sort" onchange="location = this.value;">
-            <option value="results.html">Recently Posted</option>
-            <option value="results_bysalary.html" selected>Salary High to Low</option>
+            <option value="{% url 'results' %}">Recently Posted</option>
+            <option value="{% url 'results2' %}" selected>Salary High to Low</option>
         </select>
     </div>
 
