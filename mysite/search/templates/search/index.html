@@ -5,38 +5,78 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+    /* Style for the large button */
+        .large-button {
+          padding: 20px; /* Adjust the padding to make the button larger */
+          font-size: 16px; /* Adjust the font size for better visibility */
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          width: 440px;
+          margin: 10px;
+          cursor: pointer;
+          border-radius: 8px;
+          background-color: #4f22dc; /* Green background color */
+          color: white; /* White text color */
+          border: none; /* Remove border */
+        }
+        .large-button:hover {
+          background-color: #939bee; /* Darker green background color on hover */
+        }
+        .button-container {
+          float: right; /* Align content to the right */
+          margin: 10px; /* Optional margin for spacing */
+        }
+        .enespanol-container {
+          float: left; /* Align content to the right */
+          margin: 10px; /* Optional margin for spacing */
+        }
+
+        .my-button {
+          padding: 10px; /* Adjust padding for better appearance */
+          font-size: 16px; /* Adjust font size for better visibility */
+          cursor: pointer;
+          border-radius: 8px;
+          background-color: rgb(193, 179, 239); /* Green background color */
+          color: #000000; /* White text color */
+          border: none; /* Remove border */
+        }
+
+        .my-button:hover {
+          background-color: #9a87e8; /* Darker green background color on hover */
+        }
+
+        .red-text{
+            padding-top: 60px;
+            padding-bottom: 20px;
+        }
+  </style>
 </head>
 <body>
+    <div class="button-container">
+        <button class="my-button">Sign In/Register</button>
+    </div>
 
-    <div style="color:red; font-size:90%; text-align: center">
+    <div class="enespanol-container">
+        <button class="my-button">En Espanol</button>
+    </div>
+
+
+    <div class="red-text" style="color:red; font-size:16px; text-align: center">
 ATTENTION: Unemployment Insurance Claimants - Unemployment claim fillings and weekly requests for payment no longer available. Please visit VEC.</div>
 
     <div>
-        <img src="images/backgroundimage.jpg" alt="background" width="1500" height="350"/>
+        <img src="images/backgroundimage.jpg" alt="background" width="1400" height="350"/>
     </div>
 
-    <div style="color:white; text-align: center" class="d-grid gap-2">
-        <button class="btn btn-primary .btn-xl {
-            padding: 10px 20px;
-            font-size: 20px;
-            border-radius: 10px;
-            width: 20%;
-            }" type="button">Find a Job</button>
-        <button class="btn btn-primary .btn-xl {
-            padding: 10px 20px;
-            font-size: 20px;
-            border-radius: 10px;
-            width: 20%;
-            }" type="button">Hire a Candidate</button>
-        <button class="btn btn-primary .btn-xl {
-            padding: 10px 20px;
-            font-size: 20px;
-            border-radius: 10px;
-            width: 20%;
-            }" type="button">Apply for Employment</button>
-    </div>
+    <a href="search.html" class="large-button">Find a Job</a>
+    <a href="not_yet_implemented.html" class="large-button">Hire a Candidate</a>
+    <a href="not_yet_implemented.html" class="large-button">Apply for Unemployement</a>
+
     <div>
-        <img src="images/stats.png" width="1500" height="350"/>
+        <img src="images/stats.png" width="1400" height="350"/>
     </div>
 </body>
 
