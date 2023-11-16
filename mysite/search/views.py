@@ -33,7 +33,7 @@ def submit(request):
         print('hi')
     elif str(time) == "Part-Time":
         pdb.set_trace()
-
+d
         print('bye')"""
     if str(job_title).casefold() in ["chef"] and str(salary) == '16.75' and str(maxed).casefold() in ["hs"] and str(industry).casefold() in ["foodservice"] and str(city).casefold() in ["charlottesville"] and str(state).casefold() in ["va"] and str(radius).casefold() in ["10"] and remote == False and hybrid == False and str(inperson).casefold() == "inperson" and str(fieldofstudy).casefold() == "culinary arts" and str(time) == "Full-Time":
 
