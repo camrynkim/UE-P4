@@ -52,6 +52,43 @@
             padding-top: 60px;
             padding-bottom: 20px;
         }
+        /* Style for the container box */
+        .vertical-box {
+          display: flex; /* Use flexbox for layout */
+          justify-content: space-between; /* Space evenly between items */
+          border: 2px solid #f8f8f8; /* Border color for the box */
+          padding: 20px; /* Padding for the content inside the box */
+          padding-bottom: 60px;
+          padding-top: 40px;
+
+        }
+
+        /* Style for text boxes inside the container */
+        .text-box {
+          flex: 1; /* Make the text boxes flex to fill available space */
+          padding: 10px; /* Padding for individual text boxes */
+          border-right: 1px solid #000; /* Vertical line between text boxes */
+          text-align: center;
+          font-size:25px
+        }
+
+        /* Remove the right border for the last text box */
+        .text-box:last-child {
+          border-right: none;
+        }
+        .logo-box {
+          width: 100%; /* Set the width of the box */
+          height: 300px;
+          margin: 0 auto; /* Center the box horizontally */
+          padding: 20px; /* Padding for the content inside the box */
+          border: 2px solid #ffffff; /* Border color for the box */
+          box-sizing: border-box; /* Include padding and border in the total width */
+          text-align: center; /* Center text horizontally */
+          font-size: 40px; /* Adjust font size as needed */
+          background-color: #a491ff;
+          color: white;
+          text-align: left
+        }
   </style>
 </head>
 <body>
@@ -67,7 +104,13 @@
     <div class="red-text" style="color:red; font-size:16px; text-align: center">
 ATTENTION: Unemployment Insurance Claimants - Unemployment claim fillings and weekly requests for payment no longer available. Please visit VEC.</div>
 
-    <div style="background-image: url('images/backgroundimage.jpg')">
+     <!--<div class="logo-box">
+         <span style="font-size: 80px; font-family: ">Virginia Workforce Connection</span>
+         <br>
+         <span style="font-size: 20px">Your Gateway to employment and labor market information in Virginia</span>
+    </div>
+-->
+    <div>
         <img src="images/backgroundimage.jpg" alt="background" width="100%" height="350"/>
     </div>
 
@@ -75,7 +118,20 @@ ATTENTION: Unemployment Insurance Claimants - Unemployment claim fillings and we
     <a href="{% url 'not_yet_implemented' %}" class="large-button">Hire a Candidate</a>
     <a href="{% url 'not_yet_implemented' %}" class="large-button">Apply for Unemployement</a>
 
-    <div style="background-image: url('images/stats.png')">
+     <!--
+    <div class="vertical-box">
+
+        <div class="text-box" ><span style=font-size:60px><b>12</b></span> <br> New Jobs Available Today</div>
+
+        <div class="text-box"><span style=font-size:60px><b>508,160</b></span> <br> Current Openings Today</div>
+
+        <div class="text-box"><span style=font-size:60px><b>10,393,020</b></span> <br> People Matched With a Job</div>
+
+        <div class="text-box"><span style=font-size:60px><b>1.5 Months</b></span> <br> Average Time to Get a Job</div>
+    </div>
+-->
+
+    <div>
         <img src="images/stats.png" width="100%" height="350"/>
     </div>
 </body>
