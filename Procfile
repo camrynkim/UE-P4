@@ -1,1 +1,1 @@
-web: gunicorn ELEPHANTSP4.wsgi --log-file -
+web: gunicorn mysite.wsgi --log-file -
