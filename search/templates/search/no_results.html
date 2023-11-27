@@ -1,0 +1,75 @@
+<!DOCTTYPE html>
+<html lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/f561fcbdd3.js" crossorigin="anonymous"></script>
+    <title>Virginia Workforce Connection</title>
+
+    <style>
+        .text_blue {
+            color: blue;
+        }
+
+        .num_results {
+            color: #6C6C6C;
+            font-size: large;
+        }
+
+        fieldset {
+            border: 1px solid #000 !important;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin: 25px 15px 25px;
+        }
+
+    </style>
+</head>
+
+<body style="background-color: #E6E6E6">
+<div class="container">
+        <div>
+        <a href="{% url 'not_yet_implemented' %}"><i class="fa-solid fa-bars"
+                                                     style="font-size: 50px;"></i></a>
+        <a href="{% url 'index' %}" class="icon" ><i class="fa-solid fa-house"
+                                                     style="font-size: 50px";></i></a>
+
+        <a href="{% url 'not_yet_implemented' %}"><i class="fa-solid fa-magnifying-glass"
+                                                     style="font-size: 50px; float: right; margin-top: 25px; margin-left: 25px"></i></a>
+        <a href="{% url 'not_yet_implemented' %}"><i class="fa-solid fa-question"
+                                                     style="font-size: 50px; float: right; margin-top: 25px"></i></a>
+    </div>
+        {% block content %}
+
+    <h1><span class="text_blue"> {{search2.job}} </span> near <span class="text_blue">{{search2.city}}, {{search2.state}}</span>
+
+        {% endblock content %}
+        <span class="num_results">(0 results)</span></h1>
+    <button onclick="history.back()" class="btn btn-primary">Change Search Criteria</button>
+
+    <div align="right">
+        <label for="sort">Sort By:</label>
+        <select name="sort" id="sort" >
+            <option value="recent" selected>Recently Posted</option>
+            <option value="salary">Salary High to Low</option>
+
+            <!-- <a href="{% url 'results' %}">Recently Posted</a>
+            <a href="{% url 'results2' %}">Salary High to Low</a>-->
+        </select>
+    </div>
+
+    <div>
+            <h2 style="text-align: left; width:49%;">No Matches Found
+            </h2>
+
+
+    </div>
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+<!--citations:
+ https://www.w3schools.com/css/css_font_size.asp
+ https://stackoverflow.com/questions/17966390/how-do-i-make-a-field-required-in-html
+ https://stackoverflow.com/questions/113640/which-css-tag-creates-a-box-like-this-with-title
+ https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning
+ https://stackoverflow.com/questions/4137255/checkboxes-in-web-pages-how-to-make-them-bigger
+ https://stackoverflow.com/questions/17436843/making-a-css-button-positioning-the-text
+ https://www.w3schools.com/html/html_form_elements.asp
+ https://www.w3schools.com/howto/howto_css_switch.asp
+ https://www.w3schools.com/html/html_entities.asp#:~:text=To%20add%20real%20spaces%20to,break%20into%20a%20new%20line.
+ https://www.w3schools.com/howto/howto_css_switch.asp
+ https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+ -->
+<!DOCTTYPE html>
+<html lang = "en" style = "">
+<body style="background-color:#E6E6E6">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/f561fcbdd3.js" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> <!-- Code from Bootstrap: https://getbootstrap.com -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<div style="color:black; font-size:350%; text-align: left;  margin-left:5%; margin-bottom:1%" class="container-fluid">
+
+    <div style="font-size:140%; text-align: left; margin-top:0.5%; margin-left:5%; margin-bottom:1%">
+    <a href="{% url 'not_yet_implemented' %}" class="icon" >
+        <i class="fa-solid fa-bars"></i>
+
+
+    </a>
+        <a href="{% url 'index' %}" class="icon" >
+        <i class="fa-solid fa-house" style="margin-left:1%"></i>
+    </a>
+
+    <a href="{% url 'not_yet_implemented' %}"><i class="fa-solid fa-magnifying-glass"
+                                                     style=" float: right;margin-right:15%; margin-top: 0.5%; margin-left:1%"></i></a>
+        <a href="{% url 'not_yet_implemented' %}"><i class="fa-solid fa-question"
+                                                     style=" float: right; margin-right:0.5%; margin-top: 0.5%" ></i></a>
+
+
+
+</div>
+    <a style = "margin-left:5%;font-weight: 500;">Search For a Job</a>
+</div>
+<style>
+
+    .title_box {
+      position: fixed;
+
+  border: #6C6C6C 1px solid;
+  width: 40%;
+        margin-top: 2%;
+        margin-right:5%
+
+}
+
+.title_box #title {
+
+  position: relative;
+  top: -0.75em;
+  margin-left: 1em;
+  display: inline;
+  background-color: E6E6E6;
+  font-size: 25px;
+  font-weight: 500;
+
+}
+
+.title_box #content {}
+
+
+        .title_box2 {
+      position: fixed;
+
+  border: #6C6C6C 1px solid;
+  width: 40%;
+      margin-left:45%;
+
+        margin-top: 2%;
+
+
+
+}
+
+.title_box2 #title {
+
+  position: relative;
+  top: -0.75em;
+  margin-left: 1em;
+  display: inline;
+  background-color: E6E6E6;
+    font-size: 25px;
+    font-weight: 500;
+
+}
+
+.title_box2 #content {}
+
+            .title_box3 {
+                  position: fixed;
+
+  border: #6C6C6C 1px solid;
+  width: 40%;
+        margin-top: 24%;
+
+
+}
+
+.title_box3 #title {
+  position: relative;
+  top: -0.75em;
+  margin-left: 1em;
+  display: inline;
+  background-color: E6E6E6;
+    font-size: 25px;
+    font-weight: 500;
+
+}
+
+.title_box3 #content {
+}
+
+
+
+    /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  height: 57px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #B5B8D6;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 85%;
+  width: 47%;
+  left: 2%;
+  bottom: 8%;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #B5B8D6;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(97%);
+  -ms-transform: translateX(97%);
+  transform: translateX(97%);
+}
+</style>
+
+
+<form action = "{% url 'submit' %}" method="post">
+
+{% csrf_token %}
+        {% block content %}
+
+
+
+<div class = "container">
+
+    <div class="row">
+     <div class="title_box2 .col-sm-4" id="location">
+        <div id="title">Location</div>
+              <div id="content">
+     <div style = "display:inline; margin-left: 20px; font-size:20px; "> City<span style="color:red">*</span>
+    <input class = " mb-3" style = "" type = "text" value = {{ search2.city}} placeholder = "e.g. Richmond" name = "city" required>
+  </div>
+
+    <div style = "display:inline; margin-left: 50px; font-size:20px"> State<span style="color:red">*</span>
+        <select id="state" name="state" required>
+            <option value="">Select One</option>
+            <option value="dc">DC</option>
+            <option value="md">MD</option>
+            <option value="va">VA</option>
+        </select>
+    </div>
+
+    <div style = "margin-left: 20px; font-size:20px"> Radius
+        <select id="radius" name="radius" style = "">
+            <option value="select">Select One</option>
+
+            <option value="10">10 miles</option>
+            <option value="25">25 miles</option>
+            <option value="50">50 miles</option>
+        </select>
+    </div>
+
+
+    <div style = "margin-left: 20px; margin-top: 20px; margin-bottom: 40px; font-size:20px"> Find a job that is: <br>
+
+        <input type="checkbox" style="width:25px; height:25px" id="inperson" name="inperson" value="inperson">
+           <label for="inperson" style="font-size:20px"> In-person</label><br>
+          <input type="checkbox" style="width:25px; height:25px" id="hybrid" name="hybrid" value="hybrid">
+          <label for="hybrid" style="font-size:20px"> Hybrid</label><br>
+          <input type="checkbox" style="width:25px; height:25px" id="remote" name="remote" value="remote">
+          <label for="remote" style="font-size:20px"> Remote</label><br><br>
+
+</div>
+
+                  </div>
+         </div>
+
+  <div class="title_box .col-sm-8" id="occupation" >
+        <div id="title">Occupation</div>
+              <div id="content">
+
+             <div style = "margin-left: 20px; font-size:20px">Job Title<span style="color:red">*</span>
+
+                <input class = " mb-3" style = "" type = "text" value = {{ search2.job}} placeholder = "e.g. Accountant" name = "jobtitle" required>
+             </div>
+
+                 <div style = "margin-left: 20px; font-size:20px"> Minimum Acceptable Salary
+                 $<input class = " mb-3" style = "" type = "text" placeholder = "e.g. 15.00" name = "salary"> per hour
+              </div>
+
+                <div style = "margin-left: 20px; margin-bottom: 20px; font-size:20px;  "> Industry
+                    <select id="industry" name="industry">
+                        <option value="select">Select One</option>
+
+                        <option value="legal">Legal</option>
+                        <option value="healthcare">Healthcare</option>
+                        <option value="foodservice">Food Service</option>
+                    </select>
+                </div>
+
+                  <div style = "margin-left: 20px; margin-top: 30px; margin-bottom: 30px;">
+                      <!-- Rectangular switch -->
+                        <label class="switch">
+
+                          <input type="checkbox" id="time" name="time" value="Full-Time">
+                          <span class="slider" style="font-size:150%; line-height:350%;">    &nbsp  &nbspFull Time  &nbsp &nbsp &nbsp &nbsp &nbsp  Part Time</span>
+                        </label>
+                  </div>
+
+                  <div>
+
+                  </div>
+
+                  </div>
+
+
+    </div>
+        </div>
+
+
+
+    <div class="row">
+    <div class="title_box3 .col-sm-12" id="education">
+        <div id="title">Education</div>
+              <div id="content">
+    <div style = " margin-left: 20px; font-size:20px"> Maximum Education
+        <select id="maxed" name="maxed">
+            <option value="select">Select One</option>
+
+            <option value="hs">High School</option>
+            <option value="college">College</option>
+            <option value="masters">Masters/PhD</option>
+        </select>
+    </div>
+
+     <div class = "text-left" style = " margin-left: 20px; margin-top: 20px; font-size:20px"> Field of Study
+    <input class = " mb-3" style = "" type = "text" placeholder = "e.g. Accounting" name = "fieldofstudy">
+  </div>
+
+              </div>
+    </div>
+        </div>
+
+
+
+        <div class="row">
+
+       <div class = "text-center .col-sm-12" style = " margin-left:80%">
+    <input class = "  p-3 mb-4 " type="submit" style =  "text-align: center; line-height:10px; color: F5F5F5; background-color:#414BB2; display: flex; width: 176px;height: 59px;padding: 5px 20px;justify-content: center;align-items: center;gap: 10px;flex-shrink: 0; position: absolute; margin-top: 30%; font-size:30px; " value="Search">
+    </div>
+            </div>
+
+</div>
+
+{% endblock content %}
+
+  </form>
+
+
+
+
+
+
+
+
+</body>
+</html>
